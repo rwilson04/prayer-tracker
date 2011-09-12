@@ -1,0 +1,39 @@
+<?php echo $this->docType(); ?>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<?php 
+	$this->headTitle()->prepend('Tracking'); 
+	$this->headTitle()->setSeparator(' - '); 
+	//$this->headLink()->appendStylesheet("http://fonts.googleapis.com/css?family=Copse:regular"); 
+	//$this->headLink()->appendStylesheet("/css/global.css"); 
+	echo $this->headMeta();
+	echo $this->headTitle();
+	echo $this->headLink(); 
+?>
+</head>
+<body>
+	<?php echo $this->layout()->content; ?>
+
+	<?php 
+		if (APPLICATION_ENV == "development" || APPLICATION_ENV == "testing") 
+		{
+
+			if ($this->placeholder('debug')->getValue())
+			{
+				echo "<fieldset><legend>Debug</legend><pre>";
+				print_r($this->placeholder('debug')->getValue());
+				echo "</pre></fieldset>";
+			}
+			//also check zend registry, in case placeholder doesn't work for some reason
+			//initialized in bootstrap
+			$debug = Zend_Registry::get('debug');
+			if (!empty($debug))
+			{
+				echo "<fieldset><legend>Registry based debug</legend><pre>";
+				print_r($debug);
+				echo "</pre></fieldset>";
+			}
+		}
+	?>
+</body>
