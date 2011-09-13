@@ -2,3 +2,4 @@ A WebApp for tracking prayers, either as a group or individually.
 Allows subscriptions to updates, historical tracking, lists which have been answered, moderators, etc.
 Could also be used to track other things, like tasks in a project.
 changed line 1 and 2, but only committing 1 at first
+changed line 2 at the same time as 1, but committing 2 later
