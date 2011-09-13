@@ -27,7 +27,27 @@
         <modelFile modelName="UsersMapper"/>
         <dbTableDirectory>
           <dbTableFile dbTableName="Users"/>
+          <dbTableFile dbTableName="AuthSources"/>
+          <dbTableFile dbTableName="Groups"/>
+          <dbTableFile dbTableName="Trackables"/>
+          <dbTableFile dbTableName="Statuses"/>
+          <dbTableFile dbTableName="UserGroups"/>
+          <dbTableFile dbTableName="States"/>
+          <dbTableFile dbTableName="Types"/>
+          <dbTableFile dbTableName="TrackableGroups"/>
         </dbTableDirectory>
+        <modelFile modelName="AuthSource"/>
+        <modelFile modelName="AuthSourcesMapper"/>
+        <modelFile modelName="Group"/>
+        <modelFile modelName="GroupsMapper"/>
+        <modelFile modelName="Trackable"/>
+        <modelFile modelName="TrackablesMapper"/>
+        <modelFile modelName="Status"/>
+        <modelFile modelName="StatusesMapper"/>
+        <modelFile modelName="UserGroupsMapper"/>
+        <modelFile modelName="State"/>
+        <modelFile modelName="StatesMapper"/>
+        <modelFile modelName="TrackableGroupsMapper"/>
       </modelsDirectory>
       <modulesDirectory enabled="false"/>
       <viewsDirectory>
