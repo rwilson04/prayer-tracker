@@ -22,7 +22,13 @@
           <layoutScriptFile layoutName="layout"/>
         </layoutScriptsDirectory>
       </layoutsDirectory>
-      <modelsDirectory/>
+      <modelsDirectory>
+        <modelFile modelName="User"/>
+        <modelFile modelName="UsersMapper"/>
+        <dbTableDirectory>
+          <dbTableFile dbTableName="Users"/>
+        </dbTableDirectory>
+      </modelsDirectory>
       <modulesDirectory enabled="false"/>
       <viewsDirectory>
         <viewScriptsDirectory>
