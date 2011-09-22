@@ -1,5 +1,5 @@
 <phpunit bootstrap="./bootstrap.php">
-    <testsuite name="Application Test Suite">
+    <testsuite name="Tracker Test Suite">
         <directory>./application</directory>
     </testsuite>
     <testsuite name="Library Test Suite">
@@ -7,6 +7,18 @@
     </testsuite>
     
     <filter>
+		<!--following whitelist added from zendcast -->
+        <whitelist>
+            <directory suffix=".php">../application</directory>
+            <directory suffix=".php">../library</directory>
+			<exclude>
+				<directory>../library/Shinymayhem/Zend</directory>
+			</exclude>
+			<exclude>
+				<directory suffix=".phtml">../application/</directory>
+				<file>../application/controllers/ErrorController.php</file>
+			</exclude>
+		</whitelist>
         <!-- If Zend Framework is inside your project's library, uncomment this filter -->
         <!-- 
         <whitelist>
@@ -14,4 +26,9 @@
         </whitelist>
         -->
     </filter>
+	<logging>
+		<log type="coverage-html" target="./log/report" charset="UTF-8" yui="true"
+			highlight="true" lowUpperBound="50" highLowerBound="80"/>
+		<log type="testdox" target="../public/test-coverage.html" />
+	</logging>
 </phpunit>
