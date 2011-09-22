@@ -19,21 +19,13 @@ class TrackablesMapperTest extends Zend_Test_PHPUnit_ControllerTestCase
 	public function setUpContainer()
 	{
 		$container = new Shinymayhem_Application_Container();
-		$container->exceptionClass = 'Tracker_Application_Exception';
 
-		//use mock in this function when only one will be needed?
 		$container->trackablesTable = $this->getMock('Zend_Db_Table'); //mock Zend_Db_Table_Abstract or subclass
-		//use class in this function when multiple mocks will be created?
-		$container->trackableClass = 'Application_Model_Trackable';
-
-		//$container->trackable = $container->asShared(function ($c) 
-		//{
-			//return new Application_Model_Trackable();
-		//});
+		$container->trackable = $this->getMock('Application_Model_Trackable');
+		//use asShared when only one is to be created (not the same as a singleton)
 		$container->trackablesMapper = $container->asShared(function ($c)
 		{
 			$mapper = new Application_Model_TrackablesMapper($c->trackablesTable);
-			$mapper->setExceptionClass($c->exceptionClass);
 			return $mapper;
 		});
 		$this->_container = $container;
@@ -51,7 +43,7 @@ class TrackablesMapperTest extends Zend_Test_PHPUnit_ControllerTestCase
 			'user_id'=>3
 		);
 		
-		$trackable = $this->getMock($this->_container->trackableClass);
+		$trackable = $this->_container->trackable;
 
 		//make sure each of these methods is called
 		$trackable->expects($this->once())
@@ -79,7 +71,8 @@ class TrackablesMapperTest extends Zend_Test_PHPUnit_ControllerTestCase
 		$result = array(
 		);
 
-		$trackable = $this->getMock($this->_container->trackableClass);
+		//$trackable = $this->getMock($this->_container->trackableClass);
+		$trackable = $this->_container->trackable;
 
 		//make sure none of the attributes are set when nothing is found
 		$trackable->expects($this->never())
