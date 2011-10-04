@@ -27,7 +27,7 @@
             <h2>Class Coverage Distribution</h2>
             <canvas id="classCoverageDistribution" width="475" height="200"></canvas>
             <script>
-            var ccd = new RGraph.Bar('classCoverageDistribution', [18,0,2,0,1,0,0,0,2,1,1,8]);
+            var ccd = new RGraph.Bar('classCoverageDistribution', [20,0,1,0,0,0,0,1,2,1,3,8]);
             ccd.Set('chart.background.barcolor1', 'white');
             ccd.Set('chart.background.barcolor2', 'white');
             ccd.Set('chart.colors', ['blue']);
@@ -44,7 +44,7 @@
             <h2>Class Complexity</h2>
             <canvas id="classComplexity" width="475" height="200"></canvas>
             <script>
-            var cc = new RGraph.Scatter('classComplexity', [[100,5,"blue","Bootstrap"],[100,2,"blue","IndexController"],[100,2,"blue","UsersController"],[0,0,"blue","Application_Model_AuthSource"],[0,0,"blue","Application_Model_AuthSourcesMapper"],[0,0,"blue","Application_Model_DbTable_AuthSources"],[0,0,"blue","Application_Model_DbTable_Groups"],[0,0,"blue","Application_Model_DbTable_States"],[0,0,"blue","Application_Model_DbTable_Statuses"],[0,0,"blue","Application_Model_DbTable_TrackableGroups"],[0,0,"blue","Application_Model_DbTable_Trackables"],[0,0,"blue","Application_Model_DbTable_Types"],[0,0,"blue","Application_Model_DbTable_UserGroups"],[0,0,"blue","Application_Model_DbTable_Users"],[71.428571428571,5,"blue","Application_Model_Group"],[0,0,"blue","Application_Model_GroupsMapper"],[0,0,"blue","Application_Model_State"],[0,0,"blue","Application_Model_StatesMapper"],[15.625,18,"blue","Application_Model_Status"],[0,0,"blue","Application_Model_StatusesMapper"],[31.111111111111,25,"blue","Application_Model_Trackable"],[0,0,"blue","Application_Model_TrackableGroupsMapper"],[100,8,"blue","Application_Model_TrackablesMapper"],[100,0,"blue","Application_Model_User"],[0,0,"blue","Application_Model_UserGroupsMapper"],[0,0,"blue","Application_Model_UsersMapper"],[95.238095238095,8,"blue","Shinymayhem_Application_Container"],[100,0,"blue","Shinymayhem_Application_Exception"],[12.5,4,"blue","Shinymayhem_Db_Profiler"],[100,11,"blue","Shinymayhem_Model_Mapper"],[78.333333333333,14,"blue","Shinymayhem_Plugin_Authentication"],[85.714285714286,3,"blue","Shinymayhem_Resource_Controller"],[100,0,"blue","Tracker_Application_Exception"]]);
+            var cc = new RGraph.Scatter('classComplexity', [[100,5,"blue","Bootstrap"],[100,3,"blue","IndexController"],[96.428571428571,4,"blue","TrackablesController"],[100,4,"blue","UsersController"],[0,0,"blue","Application_Model_AuthSource"],[0,0,"blue","Application_Model_AuthSourcesMapper"],[0,0,"blue","Application_Model_DbTable_AuthSources"],[0,0,"blue","Application_Model_DbTable_Groups"],[0,0,"blue","Application_Model_DbTable_States"],[0,0,"blue","Application_Model_DbTable_Statuses"],[0,0,"blue","Application_Model_DbTable_TrackableGroups"],[100,0,"blue","Application_Model_DbTable_Trackables"],[0,0,"blue","Application_Model_DbTable_Types"],[0,0,"blue","Application_Model_DbTable_UserGroups"],[0,0,"blue","Application_Model_DbTable_Users"],[71.428571428571,5,"blue","Application_Model_Group"],[0,0,"blue","Application_Model_GroupsMapper"],[0,0,"blue","Application_Model_State"],[0,0,"blue","Application_Model_StatesMapper"],[15.625,18,"blue","Application_Model_Status"],[0,0,"blue","Application_Model_StatusesMapper"],[100,7,"blue","Application_Model_Trackable"],[0,0,"blue","Application_Model_TrackableGroupsMapper"],[100,0,"blue","Application_Model_TrackablesMapper"],[0,0,"blue","Application_Model_Type"],[0,2,"blue","Application_Model_User"],[0,0,"blue","Application_Model_UserGroupsMapper"],[0,0,"blue","Application_Model_UsersMapper"],[100,8,"blue","Shinymayhem_Application_Container"],[100,0,"blue","Shinymayhem_Application_Exception"],[62.5,4,"blue","Shinymayhem_Db_Profiler"],[92.105263157895,18,"blue","Shinymayhem_Model"],[99.137931034483,37,"blue","Shinymayhem_Model_Mapper"],[78.333333333333,14,"blue","Shinymayhem_Plugin_Authentication"],[85.714285714286,3,"blue","Shinymayhem_Resource_Controller"],[0,0,"blue","Tracker_Application_Exception"]]);
             cc.Set('chart.xmax', 100);
             cc.Set('chart.background.barcolor1', 'white');
             cc.Set('chart.background.barcolor2', 'white');
@@ -60,9 +60,10 @@
           <td valign="top">
             <h2>Top Project Risks</h2>
             <ul>
-              <li><a href="application_models_Trackable.php.html#3">Application_Model_Trackable</a> (229)</li>
+              <li><a href="library_Shinymayhem_Model_Mapper.php.html#3">Shinymayhem_Model_Mapper</a> (37)</li>
+              <li><a href="library_Shinymayhem_Model.php.html#3">Shinymayhem_Model</a> (18)</li>
               <li><a href="library_Shinymayhem_Plugin_Authentication.php.html#31">Shinymayhem_Plugin_Authentication</a> (15)</li>
-              <li><a href="library_Shinymayhem_Application_Container.php.html#6">Shinymayhem_Application_Container</a> (8)</li>
+              <li><a href="application_controllers_TrackablesController.php.html#3">TrackablesController</a> (4)</li>
               <li><a href="library_Shinymayhem_Resource_Controller.php.html#2">Shinymayhem_Resource_Controller</a> (3)</li>
 
             </ul>
@@ -71,16 +72,16 @@
           <td valign="top">
             <h2>Least Tested Methods</h2>
             <ul>
-              <li><a href="application_models_Trackable.php.html#114">Application_Model_Trackable::setGroups</a> (0%)</li>
-              <li><a href="application_models_Trackable.php.html#131">Application_Model_Trackable::addGroup</a> (0%)</li>
-              <li><a href="application_models_Trackable.php.html#136">Application_Model_Trackable::removeGroup</a> (0%)</li>
-              <li><a href="application_models_Trackable.php.html#106">Application_Model_Trackable::getGroups</a> (0%)</li>
-              <li><a href="application_models_Trackable.php.html#101">Application_Model_Trackable::setType</a> (0%)</li>
-              <li><a href="application_models_Trackable.php.html#86">Application_Model_Trackable::getUser</a> (0%)</li>
-              <li><a href="application_models_Trackable.php.html#91">Application_Model_Trackable::getType</a> (0%)</li>
-              <li><a href="application_models_Trackable.php.html#96">Application_Model_Trackable::setUser</a> (0%)</li>
-              <li><a href="application_models_Trackable.php.html#141">Application_Model_Trackable::clearGroups</a> (0%)</li>
-              <li><a href="library_Shinymayhem_Db_Profiler.php.html#8">Shinymayhem_Db_Profiler::queryStart</a> (0%)</li>
+              <li><a href="application_models_User.php.html#7">Application_Model_User::getId</a> (0%)</li>
+              <li><a href="application_models_User.php.html#11">Application_Model_User::findById</a> (0%)</li>
+              <li><a href="application_models_Status.php.html#109">Application_Model_Status::setState</a> (0%)</li>
+              <li><a href="application_models_Status.php.html#104">Application_Model_Status::getState</a> (0%)</li>
+              <li><a href="application_models_Status.php.html#93">Application_Model_Status::findById</a> (0%)</li>
+              <li><a href="library_Shinymayhem_Db_Profiler.php.html#21">Shinymayhem_Db_Profiler::getQueryProfile</a> (0%)</li>
+              <li><a href="library_Shinymayhem_Db_Profiler.php.html#26">Shinymayhem_Db_Profiler::getLastQueryProfile</a> (0%)</li>
+              <li><a href="library_Shinymayhem_Plugin_Authentication.php.html#78">Shinymayhem_Plugin_Authentication::acl</a> (0%)</li>
+              <li><a href="library_Shinymayhem_Plugin_Authentication.php.html#84">Shinymayhem_Plugin_Authentication::modular</a> (0%)</li>
+              <li><a href="library_Shinymayhem_Plugin_Authentication.php.html#72">Shinymayhem_Plugin_Authentication::loginAction</a> (0%)</li>
 
             </ul>
           </td>
@@ -92,7 +93,7 @@
 
     <table width="100%" border="0" cellspacing="0" cellpadding="0">
       <tr><td class="ruler"><img src="glass.png" width="3" height="3" alt=""></td></tr>
-      <tr><td class="versionInfo">Generated by <a href="http://github.com/sebastianbergmann/php-code-coverage" target="_top">PHP_CodeCoverage 1.0.5</a> using <a href="http://www.php.net/" target="_top">PHP 5.3.6</a> and PHPUnit 3.5.15 at Thu Sep 22 13:57:02 EDT 2011.</td></tr>
+      <tr><td class="versionInfo">Generated by <a href="http://github.com/sebastianbergmann/php-code-coverage" target="_top">PHP_CodeCoverage 1.0.5</a> using <a href="http://www.php.net/" target="_top">PHP 5.3.6</a> and PHPUnit 3.5.15 at Tue Oct 4 12:39:33 EDT 2011.</td></tr>
     </table>
 
     <br/>

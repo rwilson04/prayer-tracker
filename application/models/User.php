@@ -4,6 +4,13 @@
 class Application_Model_User
 {
 
+	public function getId()
+	{
+	}
+
+	public function findById($id)
+	{
+	}
 
 }
 
